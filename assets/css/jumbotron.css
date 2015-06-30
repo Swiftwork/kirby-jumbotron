@@ -1,0 +1,30 @@
+.jumbotron-field {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    border: 2px solid #ddd;
+    min-width: 128px;
+    height: 128px;
+    text-align: center;
+}
+
+.jumbotron-field .thumbnail {
+    z-index: 1;
+    line-height: 124px;
+    max-height: 124px;
+    color: #ccc;
+}
+
+.jumbotron-field .remove {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    right: 2px;
+    color: #fff;
+    font-size: 1.5em;
+    text-shadow: 0 0 3px #000;
+}
+
+.jumbotron-field.over {
+    border-color: #000;
+}
