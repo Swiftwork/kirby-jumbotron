@@ -24,3 +24,15 @@ In your [template](http://getkirby.com/docs/templates) you can use the field lik
 	</div>
 <? endif ?>
 ```
+
+## Note!
+
+The following code changes must be made to the [Kirby Panel]() to facilitate image preview in javascript:
+```php
+<a class="draggable" data-helper="<? __($file->filename()) ?>" data-text="<?= dragText($file) ?>" href="<? _u($file, 'show') ?>">
+```
+To
+```php
+<a class="draggable" data-helper="<? __($file->filename()) ?>" data-text="<?= dragText($file) ?>" data-url="<? __($file->url()) ?>" href="<? _u($file, 'show') ?>">
+```
+Inside <code>/panel/app/snippets/pages/sidebar/files.php</code>
